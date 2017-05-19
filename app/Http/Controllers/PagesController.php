@@ -30,8 +30,11 @@ class PagesController extends Controller
         return view('debtor');
     }
 
-    public function manage(){
-        return view('manage_users');
+     public function manage(){
+        $users = Tbl_user::all();
+        return view('manage_users',[
+            'users' => $users,
+        ]);
     }
 
 
