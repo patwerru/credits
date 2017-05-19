@@ -63,29 +63,29 @@ class HomeController extends Controller
 
     public function check_debts(Request $request){
 
-        $listing = new Tbl_due_listing();
-        $listing-> cust_name = $request->customer_name;
-        $listing-> cust_id = $request->customer_id;
-        $listing-> loan_issue_date = $request->loan_issue_date;
-        $listing-> loan_due_date = $request->loan_due_date;
-        $listing-> cust_acno = $request->account_number;
-        $listing-> customer_name = $request->mobile_number;
-        $listing-> loan_amount = $request->loan_amount;
-        $listing-> loan_balance = $request->loan_balance;
-        $listing->save();
+        //$listing = new Tbl_due_listing();
+        //$listing-> cust_name = $request->customer_name;
+        //$listing-> cust_id = $request->customer_id;
+        //$listing-> loan_issue_date = $request->loan_issue_date;
+        //$listing-> loan_due_date = $request->loan_due_date;
+        //$listing-> cust_acno = $request->account_number;
+        //$listing-> customer_name = $request->mobile_number;
+        //$listing-> loan_amount = $request->loan_amount;
+        //$listing-> loan_balance = $request->loan_balance;
+        //$listing->save();
 
-        $profile = new Tbl_profile();
-        $profile -> national_id = $request->national_id;
-        $profile -> batch_numbers = $request->batch_number;
-        $profile -> mobile_number = $request->mobile_number;
-        $profile ->save();
+        //$profile = new Tbl_profile();
+        //$profile -> national_id = $request->national_id;
+        //$profile -> batch_numbers = $request->batch_number;
+        //$profile -> mobile_number = $request->mobile_number;
+        //$profile ->save();
 
-        Session::flash('message', "A new usser has been created successfully");
-        return Redirect()->back();
+        //Session::flash('message', "A new usser has been created successfully");
+        //return Redirect()->back();
 
     }
 
     public function check_roles(Request $request){
-        dd($request);
+       
     }
 }
